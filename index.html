@@ -6,20 +6,27 @@
     <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-        function Header() {
-            return <h1>Develop. Preview. Ship.</h1>;
-          }
-           
-          function HomePage() {
-            return (
-              <div>
-                <Header />
-              </div>
-            );
-          }
-           
-          const root = ReactDOM.createRoot(app);
-          root.render(<HomePage />);
+      function Header() {
+        return <h1>Develop. Preview. Ship.</h1>;
+      }
+
+      function HomePage() {
+        const names = ["Bingo", "Zuzu", "Nibbler", "Lily","Spencer"];
+
+        return (
+          <div>
+            <Header title="Develop. Preview. Ship." />
+            <ul>
+              {names.map((name) => (
+                <li key={id}>{name}</li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(app);
+      root.render(<HomePage />);
     </script>
   </body>
 </html>
